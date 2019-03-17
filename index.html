@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>数据可视化系统</title>
+    <link rel="stylesheet" href="http://cache.amap.com/lbs/static/main1119.css"/>
+    <link rel="shortcut icon" type="image/x-icon" href="/static/icon.png">
+    <link rel="stylesheet" href="/static/css/common.css">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css" rel="stylesheet" />
+  </head>
+  <style>
+    body{
+      position: relative;
+    }
+    .title {
+      position: absolute;
+      color:#304156;
+      font-size: 24px;
+      right: 200px;
+      top:15px;
+    }
+  </style>
+  <body>
+    <!-- <div class="title">塞罕坝林场森林生态环境数据可视化系统</div> -->
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>
+<!-- script下面key值可以更换为高德开发者平台自己申请的key,也可以用我的 -->
+<script src="https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js"></script>
+
+
+
+<script src="http://webapi.amap.com/maps?v=1.4.6&key=9f63e48dcb3ccddc5cf6601788186f13&plugin=AMap.MouseTool"></script>
+<script>
+window.onmessage = function (e) {
+    var student = e.data;
+    if (student  != undefined && student  != null) {
+        if(student.id != undefined && student.id != null) {
+            var id = student.id;
+            var name = student.name;
+            console.log(id);
+            console.log(name);
+        }
+    }
+
+};
+</script>
